@@ -2,11 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.appName }}-deployment
-  namespace: {{ .Values.namespace | default "default" }}
+  namespace: {{ .Values.namespace }}
   labels:
     app: {{ .Values.appName }}
 spec:
-  replicas: {{ .Values.replicas | default 1 }}
+  replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
       app: {{ .Values.appName }}
@@ -19,9 +19,9 @@ spec:
     spec:
       containers:
         - name: container
-          image: jdwillmsen/jdw-container
+          image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 80
           envFrom:
             - configMapRef:
-                name: containerconfigmapv1.0
+                name: {{ .Values.configmap.name }}

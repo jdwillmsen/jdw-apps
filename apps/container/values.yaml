@@ -1,2 +1,14 @@
 appName: container
-#namespace: dev
+
+namespace: default
+
+replicas: 1
+
+configmap:
+  name: containerconfigmapv1.0
+  data:
+    DATA: "This is test data"
+
+image:
+  name: jdwillmsen/jdw-container
+  tag: latest
