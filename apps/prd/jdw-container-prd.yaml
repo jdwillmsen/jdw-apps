@@ -3,11 +3,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: jdw-container-prd
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: ''
     server: 'https://kubernetes.default.svc'
   source:
     path: helm/container
