@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: container-deployment
+  namespace: {{ .Values.namespace | default "default" }}
+  labels:
+    app: container
+spec:
+  replicas: {{ .Values.replicas | default 1 }}
+  selector:
+    matchLabels:
+      app: container
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: container
+        tier: frontend
+    spec:
+      containers:
+        - name: container
+          image: jdwillmsen/jdw-container
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: containerconfigmapv1.0
