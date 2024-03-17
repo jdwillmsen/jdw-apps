@@ -1,0 +1,2 @@
+servicename=$(kubectl get svc -l "app={{ .Values.appName }}" -o jsonpath=".items[0].metadata.name}")
+kubectl port-forward svc/{{ .Values.appName }}-service 9200:80 --namespace {{ .Values.namespace }}

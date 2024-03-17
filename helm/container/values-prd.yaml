@@ -1,0 +1,7 @@
+namespace: prd
+
+replicas: 3
+
+configmap:
+  data:
+    DATA: "Welcome to production"

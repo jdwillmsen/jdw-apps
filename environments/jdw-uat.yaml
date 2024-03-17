@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/jdwillmsen/jdw-apps.git
     targetRevision: HEAD
-    path: apps
+    path: apps/uat
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:

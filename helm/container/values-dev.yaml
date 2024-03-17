@@ -1,0 +1,7 @@
+namespace: dev
+
+replicas: 1
+
+configmap:
+  data:
+    DATA: "Welcome to dev"
