@@ -7,8 +7,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    name: ''
-    namespace: argocd
+    namespace: uat
     server: 'https://kubernetes.default.svc'
   source:
     path: helm/container
