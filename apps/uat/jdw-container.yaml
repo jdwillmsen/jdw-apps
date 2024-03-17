@@ -16,7 +16,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values-dev.yaml
+        - values-prd.yaml
   sources: []
   project: default
   syncPolicy:
