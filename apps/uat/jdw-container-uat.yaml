@@ -9,6 +9,7 @@ metadata:
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
+    namespace: uat
   source:
     path: helm/container
     repoURL: 'https://github.com/jdwillmsen/jdw-apps.git'
