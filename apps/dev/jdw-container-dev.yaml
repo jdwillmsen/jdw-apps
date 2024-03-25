@@ -10,7 +10,7 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
   source:
-    path: helm/container-2
+    path: helm/container
     repoURL: 'https://github.com/jdwillmsen/jdw-apps.git'
     targetRevision: HEAD
     helm:
