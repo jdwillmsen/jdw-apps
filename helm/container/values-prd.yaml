@@ -1,7 +1,4 @@
-namespace: prd
+replicaCount: 3
 
-replicas: 3
-
-configmap:
-  data:
-    DATA: "Welcome to production"
+envs:
+  ENVIRONMENT: prod

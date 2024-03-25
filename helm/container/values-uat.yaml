@@ -1,7 +1,4 @@
-namespace: uat
+replicaCount: 2
 
-replicas: 2
-
-configmap:
-  data:
-    DATA: "Welcome to uat"
+envs:
+  ENVIRONMENT: uat

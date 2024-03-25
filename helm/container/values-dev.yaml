@@ -1,7 +1,4 @@
-namespace: dev
+replicaCount: 1
 
-replicas: 1
-
-configmap:
-  data:
-    DATA: "Welcome to dev"
+envs:
+  ENVIRONMENT: dev
