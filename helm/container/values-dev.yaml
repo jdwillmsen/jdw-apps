@@ -9,7 +9,7 @@ ingress:
   tls:
     - hosts:
         - container.dev.jdw.com
-      secretName: {{ .Chart.Name }}-tls
+      secretName: container-dev-tls
 
 envs:
   ENVIRONMENT: dev

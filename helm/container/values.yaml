@@ -40,7 +40,7 @@ ingress:
   tls:
     - hosts:
         - container.default.jdw.com
-      secretName: {{ .Chart.Name }}-tls
+      secretName: container-default-tls
 
 resources: {}
 

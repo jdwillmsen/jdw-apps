@@ -12,7 +12,7 @@ ingress:
   tls:
     - hosts:
         - container.prd.jdw.com
-      secretName: {{ .Chart.Name }}-tls
+      secretName: container-prd-tls
 
 envs:
   ENVIRONMENT: prod

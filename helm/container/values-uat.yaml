@@ -9,7 +9,7 @@ ingress:
   tls:
     - hosts:
         - container.uat.jdw.com
-      secretName: {{ .Chart.Name }}-tls
+      secretName: container-uat-tls
 
 envs:
   ENVIRONMENT: uat
