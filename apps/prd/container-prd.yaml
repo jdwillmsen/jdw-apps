@@ -2,21 +2,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: container
+  name: container-prd
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: uat
+    namespace: prd
   source:
     path: helm/container
     repoURL: 'https://github.com/jdwillmsen/jdw-apps.git'
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values-uat.yaml
+        - values-prd.yaml
   sources: []
   project: default
   syncPolicy:
