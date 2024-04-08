@@ -1,4 +1,15 @@
 replicaCount: 2
 
+ingress:
+  hosts:
+    - host: container.uat.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - container.uat.jdw.com
+      secretName: { { $fullName } }-tls
+
 envs:
   ENVIRONMENT: uat

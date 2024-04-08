@@ -27,15 +27,20 @@ service:
   port: 80
 
 ingress:
-  enabled: false
-  className: ""
-  annotations: {}
+  enabled: true
+  className: "public"
+  annotations:
+    kubernetes.io/ingress.class: public
+    cert-manager.io/cluster-issuer: letsencrypt-staging
   hosts:
-    - host: chart-example.local
+    - host: container.default.jdw.com
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: []
+  tls:
+    - hosts:
+        - container.default.jdw.com
+      secretName: {{ $fullName }}-tls
 
 resources: {}
 

@@ -1,4 +1,15 @@
 replicaCount: 1
 
+ingress:
+  hosts:
+    - host: container.dev.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - container.dev.jdw.com
+      secretName: { { $fullName } }-tls
+
 envs:
   ENVIRONMENT: dev
