@@ -1,0 +1,47 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: bootstrap-config
+  namespace: argocd
+spec:
+  goTemplate: true
+  generators:
+    - list:
+        elements:
+          - appName: container-dev
+            path: helm/container
+            namespace: dev
+            values:
+              - values-dev.yaml
+          - appName: container-uat
+            namespace: uat
+            values:
+              - values-uat.yaml
+          - appName: container-prd
+            namespace: prd
+            values:
+              - values-prd.yaml
+  template:
+    metadata:
+      name: "{{ .appName }}"
+      annotations:
+        argocd.argoproj.io/sync-wave: "1"
+      spec:
+        project: default
+        source:
+          repoURL: https://github.com/jdwillmsen/jdw-apps.git
+          targetRevision: main
+          path: "{{ .path }}"
+          helm:
+            valuesFiles:
+              {{- toYaml .values | nindent 14 }}
+        destination:
+          namespace: "{{ .namespace }}"
+          server: https://kubernetes.default.svc
+        syncPolicy:
+          automated:
+            prune: true
+            selfHeal: true
+          syncOptions:
+            - CreateNamespace=true
+            - PruneLast=true
