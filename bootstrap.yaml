@@ -47,7 +47,7 @@ spec:
 
   templatePatch: |
     spec:
-    source:
-      helm:
-        valuesFiles:
-          {{- toYaml .values | nindent 12 }}
+      source:
+        helm:
+          valuesFiles:
+            {{- toYaml .values | nindent 12 }}
