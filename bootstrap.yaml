@@ -50,4 +50,6 @@ spec:
       source:
         helm:
           valuesFiles:
-            {{- toYaml .values | nindent 12 }}
+          {{- range .values }}
+            - {{ . }}
+          {{- end }}
