@@ -14,10 +14,12 @@ spec:
             values:
               - values-dev.yaml
           - appName: container-uat
+            path: helm/container
             namespace: uat
             values:
               - values-uat.yaml
           - appName: container-prd
+            path: helm/container
             namespace: prd
             values:
               - values-prd.yaml
