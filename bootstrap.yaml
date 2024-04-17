@@ -44,12 +44,9 @@ spec:
         syncOptions:
           - CreateNamespace=true
           - PruneLast=true
-
-    templatePatch: |
-      spec:
-        source:
-          helm:
-            valuesFiles:
-            {{- range .values }}
-              - "{{ . }}"
-            {{- end }}
+  templatePatch: |
+    spec:
+      source:
+        helm:
+          valueFiles:
+            {{- toYaml .values | nindent 12 }}
