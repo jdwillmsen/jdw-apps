@@ -32,11 +32,6 @@ spec:
           repoURL: https://github.com/jdwillmsen/jdw-apps.git
           targetRevision: main
           path: "{{ .path }}"
-          helm:
-          {{- with .values }}
-            valuesFiles:
-              {{- toYaml . | nindent 12 }}
-          {{- end }}
         destination:
           namespace: "{{ .namespace }}"
           server: https://kubernetes.default.svc
@@ -47,3 +42,10 @@ spec:
           syncOptions:
             - CreateNamespace=true
             - PruneLast=true
+
+  templatePatch: |
+    spec:
+    source:
+      helm:
+        valuesFiles:
+          {{- toYaml .values | nindent 14 }}
