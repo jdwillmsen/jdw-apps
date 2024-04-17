@@ -13,7 +13,7 @@ spec:
               repoURL: https://github.com/jdwillmsen/jdw-apps.git
               revision: main
               files:
-                - path: envs/*
+                - path: envs/dev.yaml
           - list:
               elementsYaml: "{{ .apps | toJson }}"
   template:
