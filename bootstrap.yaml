@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
 spec:
   goTemplate: true
+  goTemplateOptions: [ "missingkey=error" ]
   generators:
     - matrix:
         generators:
@@ -14,7 +15,7 @@ spec:
               files:
                 - path: envs/*
           - list:
-              elementsYaml: "{{ .apps }}"
+              elementsYaml: "{{ .apps | toJson }}"
   template:
     metadata:
       name: "{{ .appName }}"
