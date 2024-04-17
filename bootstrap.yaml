@@ -14,7 +14,7 @@ spec:
               files:
                 - path: envs/*
           - list:
-              elementsYaml: "{{ .apps | toJson }}"
+              elementsYaml: "{{ .apps }}"
   template:
     metadata:
       name: "{{ .appName }}"
