@@ -13,7 +13,7 @@ spec:
               repoURL: https://github.com/jdwillmsen/jdw-apps.git
               revision: main
               files:
-                - path: envs/dev.yaml
+                - path: envs/*
           - list:
               elementsYaml: "{{ .apps | toJson }}"
   template:
@@ -26,7 +26,7 @@ spec:
       source:
         repoURL: https://github.com/jdwillmsen/jdw-apps.git
         targetRevision: main
-        path: "{{ .path }}"
+        path: "{{ .helmPath }}"
       destination:
         namespace: "{{ .namespace }}"
         server: https://kubernetes.default.svc

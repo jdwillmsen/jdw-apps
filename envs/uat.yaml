@@ -1,6 +1,6 @@
 apps:
   - appName: container-prd
-    path: helm/container
+    helmPath: helm/container
     namespace: prd
     values:
       - values-prd.yaml

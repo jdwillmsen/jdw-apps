@@ -1,6 +1,6 @@
 apps:
   - appName: container-dev
-    path: helm/container
+    helmPath: helm/container
     namespace: dev
     values:
       - values-dev.yaml
