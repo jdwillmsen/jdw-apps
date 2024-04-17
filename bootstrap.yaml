@@ -26,26 +26,26 @@ spec:
       name: "{{ .appName }}"
       annotations:
         argocd.argoproj.io/sync-wave: "1"
-      spec:
-        project: default
-        source:
-          repoURL: https://github.com/jdwillmsen/jdw-apps.git
-          targetRevision: main
-          path: "{{ .path }}"
-        destination:
-          namespace: "{{ .namespace }}"
-          server: https://kubernetes.default.svc
-        syncPolicy:
-          automated:
-            prune: true
-            selfHeal: true
-          syncOptions:
-            - CreateNamespace=true
-            - PruneLast=true
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/jdwillmsen/jdw-apps.git
+        targetRevision: main
+        path: "{{ .path }}"
+      destination:
+        namespace: "{{ .namespace }}"
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+          - PruneLast=true
 
   templatePatch: |
     spec:
     source:
       helm:
         valuesFiles:
-          {{- toYaml .values | nindent 14 }}
+          {{- toYaml .values | nindent 12 }}
