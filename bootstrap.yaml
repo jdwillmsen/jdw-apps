@@ -33,8 +33,10 @@ spec:
           targetRevision: main
           path: "{{ .path }}"
           helm:
+          {{- with .values }}
             valuesFiles:
-              {{- toYaml .values | nindent 14 }}
+              {{- toYaml . | nindent 12 }}
+          {{- end }}
         destination:
           namespace: "{{ .namespace }}"
           server: https://kubernetes.default.svc
