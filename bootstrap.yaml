@@ -6,23 +6,15 @@ metadata:
 spec:
   goTemplate: true
   generators:
-    - list:
-        elements:
-          - appName: container-dev
-            path: helm/container
-            namespace: dev
-            values:
-              - values-dev.yaml
-          - appName: container-uat
-            path: helm/container
-            namespace: uat
-            values:
-              - values-uat.yaml
-          - appName: container-prd
-            path: helm/container
-            namespace: prd
-            values:
-              - values-prd.yaml
+    - matrix:
+        generators:
+          - git:
+              repoURL: https://github.com/jdwillmsen/jdw-apps.git
+              revision: main
+              files:
+                - path: envs/*
+          - list:
+              elementsYaml: "{{ .apps | toJson }}"
   template:
     metadata:
       name: "{{ .appName }}"

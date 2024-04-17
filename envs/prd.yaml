@@ -1,26 +1,6 @@
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: prd
-  namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  project: default
-  destination:
-    server: https://kubernetes.default.svc
-  source:
-    repoURL: https://github.com/jdwillmsen/jdw-apps.git
-    targetRevision: HEAD
-    path: apps/prd
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-      allowEmpty: false
-    syncOptions:
-      - Validate=true
-      - CreateNamespace=true
-      - PrunePropagationPolicy=foreground
-      - PruneLast=true
+apps:
+  - appName: container-uat
+    path: helm/container
+    namespace: uat
+    values:
+      - values-uat.yaml
