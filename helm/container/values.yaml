@@ -31,7 +31,7 @@ ingress:
   className: "nginx"
   annotations:
     kubernetes.io/ingress.class: public
-    cert-manager.io/cluster-issuer: letsencrypt-staging
+    cert-manager.io/cluster-issuer: ss-clusterissuer
   hosts:
     - host: container.default.jdw.com
       paths:
