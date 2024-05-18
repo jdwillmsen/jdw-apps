@@ -76,7 +76,7 @@ affinity: {}
 
 envs:
   UR_PG_DATASOURCE_URL: default
-  UR_PG_USERNAME:
+  UR_PG_USERNAME: app
 
 envSecrets:
-  UR_PG_PASSWORD:
+  UR_PG_PASSWORD: ur-secrets
