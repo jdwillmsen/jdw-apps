@@ -30,7 +30,7 @@ ingress:
   enabled: true
   className: "nginx"
   annotations:
-    kubernetes.io/ingress.class: public
+    kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: ss-clusterissuer
   hosts:
     - host: container.default.jdw.com
@@ -75,4 +75,5 @@ affinity: {}
 
 envs:
   ENVIRONMENT: default
+
 envSecrets: {}
