@@ -5,6 +5,7 @@ image:
   pullPolicy: IfNotPresent
   tag: ""
 
+# This is the command busybox will run when the container starts
 command:
   - "/bin/sh"
   - "-c"
