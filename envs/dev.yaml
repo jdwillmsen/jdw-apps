@@ -1,7 +1,7 @@
 apps:
   - appName: secret-store-dev
     helmPath: helm/secret-store
-    namespace: dev
+    namespace: external-secrets
     values:
       - values.yaml
   - appName: container-dev
