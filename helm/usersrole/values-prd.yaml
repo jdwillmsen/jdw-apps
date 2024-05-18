@@ -1,0 +1,15 @@
+replicaCount: 3
+
+ingress:
+  hosts:
+    - host: usersrole.prd.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - usersrole.prd.jdw.com
+      secretName: usersrole-prd-tls
+
+envs:
+  ENVIRONMENT: prod

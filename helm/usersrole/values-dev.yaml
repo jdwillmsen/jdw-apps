@@ -1,0 +1,15 @@
+replicaCount: 1
+
+ingress:
+  hosts:
+    - host: usersrole.dev.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - usersrole.dev.jdw.com
+      secretName: usersrole-dev-tls
+
+envs:
+  ENVIRONMENT: dev

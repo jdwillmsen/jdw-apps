@@ -1,0 +1,15 @@
+replicaCount: 2
+
+ingress:
+  hosts:
+    - host: usersrole.uat.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - usersrole.uat.jdw.com
+      secretName: usersrole-uat-tls
+
+envs:
+  ENVIRONMENT: uat
