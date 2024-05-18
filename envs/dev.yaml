@@ -1,6 +1,16 @@
 apps:
+  - appName: secret-store-dev
+    helmPath: helm/secret-store
+    namespace: dev
+    values:
+      - values.yaml
   - appName: container-dev
     helmPath: helm/container
+    namespace: dev
+    values:
+      - values-dev.yaml
+  - appName: usersrole-dev
+    helmPath: helm/usersrole
     namespace: dev
     values:
       - values-dev.yaml
