@@ -14,3 +14,8 @@ apps:
     namespace: dev
     values:
       - values-dev.yaml
+  - appName: secrets-tester
+    helmPath: helm/secrets-tester
+    namespace: default
+    values:
+      - values.yaml
