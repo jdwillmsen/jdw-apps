@@ -1,3 +1,5 @@
+type: k8s
+
 command:
   - "/bin/sh"
   - "-c"

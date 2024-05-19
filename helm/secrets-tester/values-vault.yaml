@@ -1,3 +1,5 @@
+type: vault
+
 command:
   - "/bin/sh"
   - "-c"
