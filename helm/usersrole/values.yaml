@@ -83,7 +83,7 @@ externalSecrets:
       password: UR_PG_PASSWORD
 
 envs:
-  UR_PG_DATASOURCE_URL: default
+  UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-non-rw:5432/jdw
 
 envSecrets:
   UR_PG_USERNAME: postgresql-cluster-non-app
