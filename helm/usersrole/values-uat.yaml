@@ -12,4 +12,4 @@ ingress:
       secretName: usersrole-uat-tls
 
 envs:
-  ENVIRONMENT: uat
+  UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-non-rw:5432/jdw

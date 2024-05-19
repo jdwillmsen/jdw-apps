@@ -12,4 +12,4 @@ ingress:
       secretName: usersrole-prd-tls
 
 envs:
-  ENVIRONMENT: prod
+  UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-prd-rw:5432/jdw
