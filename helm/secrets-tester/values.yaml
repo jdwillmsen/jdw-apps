@@ -95,6 +95,7 @@ externalSecrets:
   refreshInterval: 1m
   secretStoreName: secret-store
   secretName: test
+  envs: {}
 
 envs: {}
 
