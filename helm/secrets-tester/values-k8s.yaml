@@ -20,11 +20,13 @@ command:
 externalSecrets:
   refreshInterval: 1m
   secretStoreName: k8s-secret-store
-  secretName: test2
+  secretName: postgresql-cluster-non-app
 
 envSecrets:
-  key1: test2
-  key2: test2
-  key3: test2
-  key4: test2
-  key5: test2
+  user: postgresql-cluster-non-app
+  username: postgresql-cluster-non-app
+  host: postgresql-cluster-non-app
+  pgpass: postgresql-cluster-non-app
+  uri: postgresql-cluster-non-app
+  jdbc-uri: postgresql-cluster-non-app
+  port: postgresql-cluster-non-app
