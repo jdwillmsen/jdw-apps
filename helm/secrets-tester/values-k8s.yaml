@@ -4,7 +4,7 @@ command:
   - |
     echo "====== Environment Variables ======"
     echo
-    keys="user username host pgpass uri jdbc-uri port"
+    keys="user username host password pgpass uri jdbc-uri port"
     for key in $keys; do
       value=$(printenv $key)
       if [ $? -eq 0 ]; then
@@ -26,6 +26,7 @@ envSecrets:
   user: postgresql-cluster-non-app
   username: postgresql-cluster-non-app
   host: postgresql-cluster-non-app
+  password: postgresql-cluster-non-app
   pgpass: postgresql-cluster-non-app
   uri: postgresql-cluster-non-app
   jdbc-uri: postgresql-cluster-non-app
