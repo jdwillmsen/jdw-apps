@@ -1,7 +1,7 @@
 apps:
   - appName: secret-store-dev
     helmPath: helm/secret-store
-    namespace: external-secrets
+    namespace: dev
     values:
       - values.yaml
   - appName: secrets-tester-k8s
