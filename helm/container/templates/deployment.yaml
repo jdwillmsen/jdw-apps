@@ -46,8 +46,8 @@ spec:
             - name: {{ $key }}
               valueFrom:
                 secretKeyRef:
-                  key: {{ $secret }}
-                  name: {{ $key | quote }}
+                  name: {{ $secret }}
+                  key: {{ $key | quote }}
             {{- end }}
           {{- end }}
           ports:
