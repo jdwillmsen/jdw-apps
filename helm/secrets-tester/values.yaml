@@ -93,12 +93,9 @@ affinity: {}
 
 externalSecrets:
   refreshInterval: 1m
-  secretStoreName: k8s-secret-store
+  secretStoreName: secret-store
   secretName: test
 
 envs: {}
 
-envSecrets:
-  key1: test
-  key2: test
-  key3: test
+envSecrets: {}
