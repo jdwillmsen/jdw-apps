@@ -60,8 +60,8 @@ resources:
      cpu: 500m
      memory: 512Mi
   requests:
-    cpu: 500m
-    memory: 512Mi
+    cpu: 100m
+    memory: 128Mi
 
 livenessProbe:
   enabled: false
