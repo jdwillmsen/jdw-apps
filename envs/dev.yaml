@@ -4,6 +4,16 @@ apps:
     namespace: external-secrets
     values:
       - values.yaml
+  - appName: secrets-tester-k8s
+    helmPath: helm/secrets-tester
+    namespace: external-secrets
+    values:
+      - values-k8s.yaml
+  - appName: secrets-tester-vault
+    helmPath: helm/secrets-tester
+    namespace: external-secrets
+    values:
+      - values-vault.yaml
   - appName: container-dev
     helmPath: helm/container
     namespace: dev
@@ -14,13 +24,3 @@ apps:
     namespace: dev
     values:
       - values-dev.yaml
-  - appName: secrets-tester-k8s
-    helmPath: helm/secrets-tester
-    namespace: default
-    values:
-      - values-k8s.yaml
-  - appName: secrets-tester-vault
-    helmPath: helm/secrets-tester
-    namespace: default
-    values:
-      - values-vault.yaml
