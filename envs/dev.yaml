@@ -6,12 +6,12 @@ apps:
       - values.yaml
   - appName: secrets-tester-k8s
     helmPath: helm/secrets-tester
-    namespace: external-secrets
+    namespace: dev
     values:
       - values-k8s.yaml
   - appName: secrets-tester-vault
     helmPath: helm/secrets-tester
-    namespace: external-secrets
+    namespace: dev
     values:
       - values-vault.yaml
   - appName: container-dev
