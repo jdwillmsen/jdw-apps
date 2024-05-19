@@ -2,10 +2,13 @@ command:
   - "/bin/sh"
   - "-c"
   - |
-    echo "Secrets:"
-    echo "key1: ${key1}"
-    echo "key2: ${key2}"
-    echo "key3: ${key3}"
+    echo "====== Environment Variables ======"
+    echo
+    while IFS='=' read -r key value; do
+    echo "$key = $value"
+    done < <(printenv)
+    echo
+    echo "==================================="
     sleep 1m
 
 externalSecrets:
