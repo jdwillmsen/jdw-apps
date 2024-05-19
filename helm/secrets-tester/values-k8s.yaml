@@ -6,7 +6,7 @@ command:
   - |
     echo "====== Environment Variables ======"
     echo
-    keys="user username host password pgpass uri jdbc-uri port"
+    keys="user username host password pgpass uri jdbc-uri port UR_PG_USERNAME UR_PG_PASSWORD"
     for key in $keys; do
       value=$(printenv $key)
       if [ $? -eq 0 ]; then
@@ -23,6 +23,9 @@ externalSecrets:
   refreshInterval: 1m
   secretStoreName: k8s-secret-store
   secretName: postgresql-cluster-non-app
+  envs:
+    username: UR_PG_USERNAME
+    password: UR_PG_PASSWORD
 
 envSecrets:
   user: postgresql-cluster-non-app
@@ -33,3 +36,5 @@ envSecrets:
   uri: postgresql-cluster-non-app
   jdbc-uri: postgresql-cluster-non-app
   port: postgresql-cluster-non-app
+  UR_PG_USERNAME: postgresql-cluster-non-app
+  UR_PG_PASSWORD: postgresql-cluster-non-app
