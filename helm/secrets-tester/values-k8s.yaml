@@ -20,9 +20,9 @@ command:
 externalSecrets:
   refreshInterval: 1m
   secretStoreName: k8s-secret-store
-  secretName: test
+  secretName: test2
 
 envSecrets:
-  key1: test
-  key2: test
-  key3: test
+  key1: test2
+  key2: test2
+  key3: test2
