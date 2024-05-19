@@ -1,0 +1,19 @@
+command:
+  - "/bin/sh"
+  - "-c"
+  - |
+    echo "Secrets:"
+    echo "key1: ${key1}"
+    echo "key2: ${key2}"
+    echo "key3: ${key3}"
+    sleep 1m
+
+externalSecrets:
+  refreshInterval: 1m
+  secretStoreName: vault-secret-store
+  secretName: test
+
+envSecrets:
+  key1: test
+  key2: test
+  key3: test
