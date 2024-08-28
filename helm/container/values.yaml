@@ -42,7 +42,13 @@ ingress:
         - container.default.jdw.com
       secretName: container-default-tls
 
-resources: {}
+resources:
+  requests:
+    memory: "64Mi"
+    cpu: "50m"
+  limits:
+    memory: "128Mi"
+    cpu: "200m"
 
 livenessProbe:
   httpGet:
