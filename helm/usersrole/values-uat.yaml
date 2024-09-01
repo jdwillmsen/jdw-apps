@@ -1,4 +1,12 @@
-replicaCount: 2
+replicaCount: 1
+
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+  limits:
+    memory: "512Mi"
+    cpu: "500m"
 
 ingress:
   hosts:
@@ -12,4 +20,20 @@ ingress:
       secretName: usersrole-uat-tls
 
 envs:
-  UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-non-rw:5432/jdw
+  UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-non-rw:5432/jdw_uat
+  UR_JWT_EXPIRATION_TIME_MS: 7200000
+  JAVA_OPTS: "-XX:+UseContainerSupport -Xms512m -Xmx1g"
+
+envSecrets:
+  - secretKey: UR_PG_USERNAME
+    key: postgresql-cluster-non-app
+    property: username
+    secretName: postgresql-cluster-non-app
+  - secretKey: UR_PG_PASSWORD
+    key: postgresql-cluster-non-app
+    property: password
+    secretName: postgresql-cluster-non-app
+  - secretKey: UR_JWT_SECRET_KEY
+    key: usersrole
+    property: jwt_key_uat
+    secretName: usersrole
