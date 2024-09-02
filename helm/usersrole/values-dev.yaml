@@ -3,11 +3,11 @@ revisionHistoryLimit: 1
 
 resources:
   requests:
-    memory: "256Mi"
-    cpu: "100m"
-  limits:
     memory: "512Mi"
-    cpu: "250m"
+    cpu: "500m"
+  limits:
+    memory: "1Gi"
+    cpu: "1"
 
 ingress:
   hosts:
@@ -31,7 +31,7 @@ externalSecrets:
 envs:
   UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-non-rw.database:5432/jdw_dev
   UR_JWT_EXPIRATION_TIME_MS: "7200000"
-  JAVA_OPTS: "-Xss256K -Xmx128M -XX:ReservedCodeCacheSize=32M -XX:MaxMetaspaceSize=32M"
+#  JAVA_OPTS: "-XX:+UseContainerSupport -Xss256K -Xmx128M -XX:ReservedCodeCacheSize=32M -XX:MaxMetaspaceSize=32M"
 
 envSecrets:
   - secretKey: UR_PG_USERNAME
