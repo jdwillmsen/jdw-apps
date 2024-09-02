@@ -3,10 +3,10 @@ revisionHistoryLimit: 1
 
 resources:
   requests:
-    memory: "1Gi"
+    memory: "2Gi"
     cpu: "500m"
   limits:
-    memory: "1Gi"
+    memory: "2Gi"
     cpu: "1"
 
 ingress:
@@ -31,7 +31,7 @@ externalSecrets:
 envs:
   UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-non-rw.database:5432/jdw_uat
   UR_JWT_EXPIRATION_TIME_MS: "7200000"
-  JAVA_OPTS: "-XX:+UseContainerSupport -Xms512m -Xmx1g"
+  JAVA_OPTS: "-XX:+UseContainerSupport -Xms1g -Xmx2g"
 
 envSecrets:
   - secretKey: UR_PG_USERNAME
