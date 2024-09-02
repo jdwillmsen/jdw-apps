@@ -9,3 +9,8 @@ apps:
     namespace: uat
     values:
       - values-uat.yaml
+  - appName: usersrole-uat
+    helmPath: helm/usersrole
+    namespace: uat
+    values:
+      - values-uat.yaml
