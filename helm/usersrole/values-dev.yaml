@@ -20,6 +20,14 @@ ingress:
         - usersrole.dev.jdw.com
       secretName: usersrole-dev-tls
 
+externalSecrets:
+  - refreshInterval: 1m
+    secretStoreName: k8s-secret-store
+    secretName: usersrole-pg-dev
+  - refreshInterval: 1m
+    secretStoreName: vault-secret-store
+    secretName: usersrole-dev
+
 envs:
   UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-non-rw.database:5432/jdw_dev
   UR_JWT_EXPIRATION_TIME_MS: "7200000"
@@ -29,12 +37,12 @@ envSecrets:
   - secretKey: UR_PG_USERNAME
     key: postgresql-cluster-non-app
     property: username
-    secretName: postgresql-cluster-non-app
+    secretName: usersrole-pg-dev
   - secretKey: UR_PG_PASSWORD
     key: postgresql-cluster-non-app
     property: password
-    secretName: postgresql-cluster-non-app
+    secretName: usersrole-pg-dev
   - secretKey: UR_JWT_SECRET_KEY
     key: usersrole
     property: jwt_key_dev
-    secretName: usersrole
+    secretName: usersrole-dev
