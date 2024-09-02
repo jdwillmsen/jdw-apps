@@ -22,10 +22,10 @@ ingress:
 externalSecrets:
   - refreshInterval: 1m
     secretStoreName: k8s-secret-store
-    secretName: postgresql-cluster-prd-app
+    secretName: usersrole-pg-prd
   - refreshInterval: 1m
     secretStoreName: k8s-secret-store
-    secretName: usersrole
+    secretName: usersrole-prd
 
 envs:
   UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-prd-rw.database:5432/jdw_prd
@@ -36,12 +36,12 @@ envSecrets:
   - secretKey: UR_PG_USERNAME
     key: postgresql-cluster-prd-app
     property: username
-    secretName: postgresql-cluster-prd-app
+    secretName: usersrole-pg-prd
   - secretKey: UR_PG_PASSWORD
     key: postgresql-cluster-prd-app
     property: password
-    secretName: postgresql-cluster-prd-app
+    secretName: usersrole-pg-prd
   - secretKey: UR_JWT_SECRET_KEY
     key: usersrole
     property: jwt_key_prd
-    secretName: usersrole
+    secretName: usersrole-prd
