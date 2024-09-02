@@ -31,7 +31,7 @@ externalSecrets:
 envs:
   UR_PG_DATASOURCE_URL: jdbc:postgresql://postgresql-cluster-non-rw.database:5432/jdw_dev
   UR_JWT_EXPIRATION_TIME_MS: "7200000"
-  JAVA_OPTS: "-Xss512K -Xmx256M -XX:ReservedCodeCacheSize=128M -XX:MaxMetaspaceSize=128M"
+  JAVA_OPTS: "-Xss256K -Xmx128M -XX:ReservedCodeCacheSize=32M -XX:MaxMetaspaceSize=32M"
 
 envSecrets:
   - secretKey: UR_PG_USERNAME
