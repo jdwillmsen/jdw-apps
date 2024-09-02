@@ -3,7 +3,7 @@ apps:
     helmPath: helm/secret-store
     namespace: dev
     values:
-      - values.yaml
+      - values-dev.yaml
   - appName: container-dev
     helmPath: helm/container
     namespace: dev

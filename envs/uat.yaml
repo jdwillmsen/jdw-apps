@@ -3,7 +3,7 @@ apps:
     helmPath: helm/secret-store
     namespace: uat
     values:
-      - values.yaml
+      - values-prd.yaml
   - appName: container-prd
     helmPath: helm/container
     namespace: prd
