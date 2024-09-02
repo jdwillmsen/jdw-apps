@@ -3,9 +3,9 @@ apps:
     helmPath: helm/secret-store
     namespace: uat
     values:
-      - values-prd.yaml
-  - appName: container-prd
+      - values-uat.yaml
+  - appName: container-uat
     helmPath: helm/container
-    namespace: prd
+    namespace: uat
     values:
-      - values-prd.yaml
+      - values-uat.yaml
