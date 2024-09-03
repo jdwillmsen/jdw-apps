@@ -9,3 +9,8 @@ apps:
     namespace: prd
     values:
       - values-prd.yaml
+  - appName: usersrole-prd
+    helmPath: helm/usersrole
+    namespace: prd
+    values:
+      - values-prd.yaml
