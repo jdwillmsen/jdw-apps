@@ -1,4 +1,7 @@
-replicaCount: 1
+replicaCount: 2
+
+image:
+  tag: "0.4.2"
 
 resources:
   requests:
