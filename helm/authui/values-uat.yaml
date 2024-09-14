@@ -1,0 +1,16 @@
+replicaCount: 1
+revisionHistoryLimit: 1
+
+ingress:
+  hosts:
+    - host: authui.uat.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - authui.uat.jdw.com
+      secretName: authui-uat-tls
+
+envs:
+  ENVIRONMENT: uat

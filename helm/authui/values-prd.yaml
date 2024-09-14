@@ -1,0 +1,26 @@
+replicaCount: 2
+
+image:
+  tag: "0.1.0"
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "512Mi"
+    cpu: "500m"
+
+ingress:
+  hosts:
+    - host: authui.prd.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - authui.prd.jdw.com
+      secretName: authui-prd-tls
+
+envs:
+  ENVIRONMENT: prod

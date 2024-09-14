@@ -1,0 +1,16 @@
+replicaCount: 1
+revisionHistoryLimit: 1
+
+ingress:
+  hosts:
+    - host: authui.dev.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - authui.dev.jdw.com
+      secretName: authui-dev-tls
+
+envs:
+  ENVIRONMENT: dev
