@@ -14,3 +14,8 @@ apps:
     namespace: dev
     values:
       - values-dev.yaml
+  - appName: authui-dev
+    helmPath: helm/authui
+    namespace: dev
+    values:
+      - values-dev.yaml
