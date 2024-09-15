@@ -2,7 +2,7 @@ replicaCount: 1
 revisionHistoryLimit: 10
 
 image:
-  repository: nginx
+  repository: jdwillmsen/jdw-authui
   pullPolicy: IfNotPresent
   tag: ""
 
