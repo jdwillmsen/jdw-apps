@@ -83,5 +83,6 @@ affinity: {}
 
 envs:
   ENVIRONMENT: default
+  AUTH_BASE_URL: http://usersrole
 
 envSecrets: []
