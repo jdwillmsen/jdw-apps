@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: service-discovery-config
+data:
+  config.json: |
+    {{ .Values.serviceDiscovery.config | toJson }}

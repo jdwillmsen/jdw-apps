@@ -1,0 +1,13 @@
+replicaCount: 1
+revisionHistoryLimit: 1
+
+ingress:
+  hosts:
+    - host: servicediscovery.dev.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - servicediscovery.dev.jdw.com
+      secretName: servicediscovery-dev-tls

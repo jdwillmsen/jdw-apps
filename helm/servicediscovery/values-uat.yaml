@@ -1,0 +1,13 @@
+replicaCount: 1
+revisionHistoryLimit: 1
+
+ingress:
+  hosts:
+    - host: servicediscovery.uat.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - servicediscovery.uat.jdw.com
+      secretName: servicediscovery-uat-tls

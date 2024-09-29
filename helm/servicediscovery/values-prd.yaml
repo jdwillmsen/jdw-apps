@@ -1,0 +1,13 @@
+replicaCount: 2
+revisionHistoryLimit: 1
+
+ingress:
+  hosts:
+    - host: servicediscovery.prd.jdw.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - servicediscovery.prd.jdw.com
+      secretName: servicediscovery-prd-tls
