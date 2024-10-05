@@ -99,4 +99,4 @@ envSecrets: []
 
 serviceDiscovery:
   config:
-    authui: http://authui
+    authui: https://authui.default.jdw.com

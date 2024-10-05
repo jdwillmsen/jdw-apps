@@ -10,3 +10,7 @@ ingress:
     - hosts:
         - servicediscovery.dev.jdw.com
       secretName: servicediscovery-dev-tls
+
+serviceDiscovery:
+  config:
+    authui: https://authui.dev.jdw.com

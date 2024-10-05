@@ -10,3 +10,7 @@ ingress:
     - hosts:
         - servicediscovery.prd.jdw.com
       secretName: servicediscovery-prd-tls
+
+serviceDiscovery:
+  config:
+    authui: https://authui.prd.jdw.com
