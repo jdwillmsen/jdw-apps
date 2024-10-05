@@ -14,3 +14,8 @@ apps:
     namespace: uat
     values:
       - values-uat.yaml
+  - appName: servicediscovery-uat
+    helmPath: helm/servicediscovery
+    namespace: uat
+    values:
+      - values-uat.yaml
