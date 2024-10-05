@@ -84,7 +84,7 @@ affinity: {}
 
 envs:
   ENVIRONMENT: default
-  AUTH_BASE_URL: http://usersrole
-  SERVICE_DISCOVERY_BASE_URL: http://servicediscovery
+  AUTH_BASE_URL: https://usersrole.default.jdw.com
+  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.default.jdw.com
 
 envSecrets: {}

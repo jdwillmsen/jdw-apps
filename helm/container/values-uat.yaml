@@ -13,3 +13,5 @@ ingress:
 
 envs:
   ENVIRONMENT: uat
+  AUTH_BASE_URL: https://usersrole.uat.jdw.com
+  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.uat.jdw.com

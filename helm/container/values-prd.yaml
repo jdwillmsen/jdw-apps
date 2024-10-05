@@ -22,3 +22,5 @@ ingress:
 
 envs:
   ENVIRONMENT: prod
+  AUTH_BASE_URL: https://usersrole.prd.jdw.com
+  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.prd.jdw.com
