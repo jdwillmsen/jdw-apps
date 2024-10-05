@@ -81,7 +81,7 @@ volumes:
 
 volumeMounts:
   - name: config-volume
-    mountPath: /app/
+    mountPath: /app/config.json
 
 nodeSelector: {}
 
