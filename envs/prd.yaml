@@ -14,3 +14,8 @@ apps:
     namespace: prd
     values:
       - values-prd.yaml
+  - appName: authui-prd
+    helmPath: helm/authui
+    namespace: prd
+    values:
+      - values-prd.yaml
