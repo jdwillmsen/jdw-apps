@@ -19,3 +19,8 @@ apps:
     namespace: dev
     values:
       - values-dev.yaml
+  - appName: servicediscovery-dev
+    helmPath: helm/servicediscovery
+    namespace: dev
+    values:
+      - values-dev.yaml
