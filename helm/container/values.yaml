@@ -84,5 +84,7 @@ affinity: {}
 
 envs:
   ENVIRONMENT: default
+  AUTH_BASE_URL: http://usersrole
+  SERVICE_DISCOVERY_BASE_URL: http://servicediscovery
 
 envSecrets: {}
