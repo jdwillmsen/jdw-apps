@@ -79,7 +79,9 @@ volumes:
     configMap:
       name: service-discovery-config
 
-volumeMounts: []
+volumeMounts:
+  - name: config-volume
+    mountPath: /
 
 nodeSelector: {}
 
