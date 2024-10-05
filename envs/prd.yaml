@@ -19,3 +19,8 @@ apps:
     namespace: prd
     values:
       - values-prd.yaml
+  - appName: servicediscovery-prd
+    helmPath: helm/servicediscovery
+    namespace: prd
+    values:
+      - values-prd.yaml
