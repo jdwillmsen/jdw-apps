@@ -13,3 +13,4 @@ ingress:
 
 envs:
   ENVIRONMENT: dev
+  AUTH_BASE_URL: https://usersrole.dev.jdw.com
