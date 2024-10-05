@@ -39,6 +39,8 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- if or .Values.envs .Values.envSecrets }}
           env:
+            - name: SD_VERSION
+              value: "{{ .Values.image.tag | default .Chart.AppVersion }}"
             {{- range $key, $value := .Values.envs }}
             - name: {{ $key }}
               value: {{ $value | quote }}
