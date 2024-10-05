@@ -81,7 +81,7 @@ volumes:
 
 volumeMounts:
   - name: config-volume
-    mountPath: /app/config.json
+    mountPath: /app/config
 
 nodeSelector: {}
 
@@ -93,6 +93,7 @@ externalSecrets: []
 
 envs:
   SD_PORT: 9000
+  SD_CONFIG_PATH: /app/config/config.json
 
 envSecrets: []
 
