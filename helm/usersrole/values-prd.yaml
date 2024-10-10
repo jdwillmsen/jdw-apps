@@ -11,13 +11,13 @@ resources:
 
 ingress:
   hosts:
-    - host: usersrole.prd.jdw.com
+    - host: usersrole.prd.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - usersrole.prd.jdw.com
+        - usersrole.prd.jdwkube.com
       secretName: usersrole-prd-tls
 
 externalSecrets:

@@ -11,15 +11,15 @@ resources:
 
 ingress:
   hosts:
-    - host: authui.prd.jdw.com
+    - host: authui.prd.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - authui.prd.jdw.com
+        - authui.prd.jdwkube.com
       secretName: authui-prd-tls
 
 envs:
   ENVIRONMENT: prod
-  AUTH_BASE_URL: https://usersrole.prd.jdw.com
+  AUTH_BASE_URL: https://usersrole.prd.jdwkube.com

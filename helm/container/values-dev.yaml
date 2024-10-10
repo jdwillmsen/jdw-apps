@@ -2,16 +2,16 @@ revisionHistoryLimit: 1
 
 ingress:
   hosts:
-    - host: container.dev.jdw.com
+    - host: container.dev.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - container.dev.jdw.com
+        - container.dev.jdwkube.com
       secretName: container-dev-tls
 
 envs:
   ENVIRONMENT: dev
-  AUTH_BASE_URL: https://usersrole.dev.jdw.com
-  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.dev.jdw.com
+  AUTH_BASE_URL: https://usersrole.dev.jdwkube.com
+  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.dev.jdwkube.com

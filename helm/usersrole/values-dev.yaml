@@ -10,13 +10,13 @@ resources:
 
 ingress:
   hosts:
-    - host: usersrole.dev.jdw.com
+    - host: usersrole.dev.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - usersrole.dev.jdw.com
+        - usersrole.dev.jdwkube.com
       secretName: usersrole-dev-tls
 
 externalSecrets:

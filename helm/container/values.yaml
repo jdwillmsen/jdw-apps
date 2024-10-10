@@ -42,13 +42,13 @@ ingress:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: ss-clusterissuer
   hosts:
-    - host: container.default.jdw.com
+    - host: container.default.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - container.default.jdw.com
+        - container.default.jdwkube.com
       secretName: container-default-tls
 
 resources:
@@ -84,7 +84,7 @@ affinity: {}
 
 envs:
   ENVIRONMENT: default
-  AUTH_BASE_URL: https://usersrole.default.jdw.com
-  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.default.jdw.com
+  AUTH_BASE_URL: https://usersrole.default.jdwkube.com
+  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.default.jdwkube.com
 
 envSecrets: {}

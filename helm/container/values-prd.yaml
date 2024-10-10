@@ -11,16 +11,16 @@ resources:
 
 ingress:
   hosts:
-    - host: container.prd.jdw.com
+    - host: container.prd.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - container.prd.jdw.com
+        - container.prd.jdwkube.com
       secretName: container-prd-tls
 
 envs:
   ENVIRONMENT: prod
-  AUTH_BASE_URL: https://usersrole.prd.jdw.com
-  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.prd.jdw.com
+  AUTH_BASE_URL: https://usersrole.prd.jdwkube.com
+  SERVICE_DISCOVERY_BASE_URL: https://servicediscovery.prd.jdwkube.com

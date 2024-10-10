@@ -2,15 +2,15 @@ revisionHistoryLimit: 1
 
 ingress:
   hosts:
-    - host: servicediscovery.prd.jdw.com
+    - host: servicediscovery.prd.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - servicediscovery.prd.jdw.com
+        - servicediscovery.prd.jdwkube.com
       secretName: servicediscovery-prd-tls
 
 serviceDiscovery:
   config:
-    authui: https://authui.prd.jdw.com
+    authui: https://authui.prd.jdwkube.com

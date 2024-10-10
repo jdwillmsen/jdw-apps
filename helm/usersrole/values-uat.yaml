@@ -10,13 +10,13 @@ resources:
 
 ingress:
   hosts:
-    - host: usersrole.uat.jdw.com
+    - host: usersrole.uat.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - usersrole.uat.jdw.com
+        - usersrole.uat.jdwkube.com
       secretName: usersrole-uat-tls
 
 externalSecrets:

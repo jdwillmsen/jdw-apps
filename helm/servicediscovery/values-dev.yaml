@@ -2,15 +2,15 @@ revisionHistoryLimit: 1
 
 ingress:
   hosts:
-    - host: servicediscovery.dev.jdw.com
+    - host: servicediscovery.dev.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - servicediscovery.dev.jdw.com
+        - servicediscovery.dev.jdwkube.com
       secretName: servicediscovery-dev-tls
 
 serviceDiscovery:
   config:
-    authui: https://authui.dev.jdw.com
+    authui: https://authui.dev.jdwkube.com

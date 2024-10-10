@@ -2,15 +2,15 @@ revisionHistoryLimit: 1
 
 ingress:
   hosts:
-    - host: authui.dev.jdw.com
+    - host: authui.dev.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - authui.dev.jdw.com
+        - authui.dev.jdwkube.com
       secretName: authui-dev-tls
 
 envs:
   ENVIRONMENT: dev
-  AUTH_BASE_URL: https://usersrole.dev.jdw.com
+  AUTH_BASE_URL: https://usersrole.dev.jdwkube.com

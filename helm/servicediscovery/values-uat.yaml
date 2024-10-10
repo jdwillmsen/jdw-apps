@@ -2,15 +2,15 @@ revisionHistoryLimit: 1
 
 ingress:
   hosts:
-    - host: servicediscovery.uat.jdw.com
+    - host: servicediscovery.uat.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - servicediscovery.uat.jdw.com
+        - servicediscovery.uat.jdwkube.com
       secretName: servicediscovery-uat-tls
 
 serviceDiscovery:
   config:
-    authui: https://authui.uat.jdw.com
+    authui: https://authui.uat.jdwkube.com
