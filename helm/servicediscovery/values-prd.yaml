@@ -1,4 +1,6 @@
 revisionHistoryLimit: 1
+image:
+  tag: "0.1.1"
 
 ingress:
   hosts:
