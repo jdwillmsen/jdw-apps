@@ -1,6 +1,8 @@
 revisionHistoryLimit: 1
 
 ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
     - host: servicediscovery.dev.jdwkube.com
       paths:

@@ -3,6 +3,8 @@ image:
   tag: "0.1.1"
 
 ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
     - host: servicediscovery.prd.jdwkube.com
       paths:
