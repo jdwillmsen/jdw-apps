@@ -1,6 +1,8 @@
 revisionHistoryLimit: 1
 
 ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-staging
   hosts:
     - host: authui.dev.jdwkube.com
       paths:
