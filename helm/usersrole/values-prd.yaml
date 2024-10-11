@@ -10,6 +10,8 @@ resources:
     cpu: "1"
 
 ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
     - host: usersrole.prd.jdwkube.com
       paths:
