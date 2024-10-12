@@ -1,0 +1,26 @@
+image:
+  tag: "0.0.0"
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "512Mi"
+    cpu: "500m"
+
+ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - host: usersui.prd.jdwkube.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - usersui.prd.jdwkube.com
+      secretName: usersui-prd-tls
+
+envs:
+  ENVIRONMENT: prod
