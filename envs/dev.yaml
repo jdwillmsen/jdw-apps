@@ -24,3 +24,8 @@ apps:
     namespace: dev
     values:
       - values-dev.yaml
+  - appName: usersui-dev
+    helmPath: helm/usersui
+    namespace: dev
+    values:
+      - values-dev.yaml
