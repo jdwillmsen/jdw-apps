@@ -24,3 +24,8 @@ apps:
     namespace: uat
     values:
       - values-uat.yaml
+  - appName: usersui-uat
+    helmPath: helm/usersui
+    namespace: uat
+    values:
+      - values-uat.yaml
