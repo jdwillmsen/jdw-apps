@@ -15,3 +15,4 @@ ingress:
 
 envs:
   ENVIRONMENT: uat
+  AUTH_BASE_URL: https://usersrole.uat.jdwkube.com

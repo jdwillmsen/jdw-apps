@@ -85,5 +85,6 @@ affinity: {}
 
 envs:
   ENVIRONMENT: default
+  AUTH_BASE_URL: https://usersrole.default.jdwkube.com
 
 envSecrets: []
