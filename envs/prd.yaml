@@ -24,3 +24,8 @@ apps:
     namespace: prd
     values:
       - values-prd.yaml
+  - appName: usersui-prd
+    helmPath: helm/usersui
+    namespace: prd
+    values:
+      - values-prd.yaml
