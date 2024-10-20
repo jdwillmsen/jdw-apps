@@ -16,3 +16,4 @@ ingress:
 serviceDiscovery:
   config:
     authui: https://authui.uat.jdwkube.com
+    usersui: https://usersui.uat.jdwkube.com

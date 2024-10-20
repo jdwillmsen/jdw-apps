@@ -1,6 +1,6 @@
 revisionHistoryLimit: 1
 image:
-  tag: "0.1.1"
+  tag: "0.1.3"
 
 ingress:
   annotations:
@@ -18,3 +18,4 @@ ingress:
 serviceDiscovery:
   config:
     authui: https://authui.prd.jdwkube.com
+    usersui: https://usersui.prd.jdwkube.com
