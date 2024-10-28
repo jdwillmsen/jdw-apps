@@ -98,5 +98,23 @@ envs:
 envSecrets: []
 
 serviceDiscovery:
-  config:
+  remotes:
     authui: https://authui.default.jdwkube.com
+    usersui: https://usersui.default.jdwkube.com
+  microFrontends:
+    - name: authui
+      path: auth
+      remoteName: authui
+      moduleName: ./Routes
+      url: https://authui.default.jdwkube.com
+      icon: login
+      title: Auth
+      description: This contains sign in and sign up functionality
+    - name: usersui
+      path: users
+      remoteName: usersui
+      moduleName: ./Routes
+      url: https://usersui.default.jdwkube.com
+      icon: groups
+      title: Users
+      description: This contains viewing users and managing profiles functionality

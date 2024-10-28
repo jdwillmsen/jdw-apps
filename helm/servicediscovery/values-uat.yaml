@@ -14,6 +14,23 @@ ingress:
       secretName: servicediscovery-uat-tls
 
 serviceDiscovery:
-  config:
+  remotes:
     authui: https://authui.uat.jdwkube.com
     usersui: https://usersui.uat.jdwkube.com
+  microFrontends:
+    - name: authui
+      path: auth
+      remoteName: authui
+      moduleName: ./Routes
+      url: https://authui.uat.jdwkube.com
+      icon: login
+      title: Auth
+      description: This contains sign in and sign up functionality
+    - name: usersui
+      path: users
+      remoteName: usersui
+      moduleName: ./Routes
+      url: https://usersui.uat.jdwkube.com
+      icon: groups
+      title: Users
+      description: This contains viewing users and managing profiles functionality

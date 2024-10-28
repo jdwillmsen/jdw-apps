@@ -1,6 +1,6 @@
 revisionHistoryLimit: 1
 image:
-  tag: "0.1.3"
+  tag: "0.2.0"
 
 ingress:
   annotations:
@@ -16,6 +16,23 @@ ingress:
       secretName: servicediscovery-prd-tls
 
 serviceDiscovery:
-  config:
+  remotes:
     authui: https://authui.prd.jdwkube.com
     usersui: https://usersui.prd.jdwkube.com
+  microFrontends:
+    - name: authui
+      path: auth
+      remoteName: authui
+      moduleName: ./Routes
+      url: https://authui.prd.jdwkube.com
+      icon: login
+      title: Auth
+      description: This contains sign in and sign up functionality
+    - name: usersui
+      path: users
+      remoteName: usersui
+      moduleName: ./Routes
+      url: https://usersui.prd.jdwkube.com
+      icon: groups
+      title: Users
+      description: This contains viewing users and managing profiles functionality
