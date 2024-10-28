@@ -34,3 +34,11 @@ serviceDiscovery:
       icon: groups
       title: Users
       description: This contains viewing users and managing profiles functionality
+    - name: rolesui
+      path: roles
+      remoteName: rolesui
+      moduleName: ./Routes
+      url: https://rolesui.dev.jdwkube.com
+      icon: lock
+      title: Roles
+      description: This contains viewing and managing roles functionality
