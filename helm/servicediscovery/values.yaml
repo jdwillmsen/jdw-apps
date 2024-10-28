@@ -77,7 +77,7 @@ readinessProbe:
 volumes:
   - name: config-volume
     configMap:
-      name: service-discovery-config
+      name: servicediscovery-config
 
 volumeMounts:
   - name: config-volume
