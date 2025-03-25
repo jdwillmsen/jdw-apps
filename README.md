@@ -29,7 +29,7 @@ automated and self-healing through Argo CD’s `ApplicationSet`.
 └── README.md             # This documentation
 ```
 
-## Automated Deployment with Argo CD
+## Automated Deployment - Argo CD
 
 This repository is designed for seamless deployments using Argo CD. It leverages `ApplicationSet` to dynamically
 configure applications based on environment definitions in `envs/`.
@@ -131,7 +131,7 @@ This configuration ensures:
 - Dynamic Helm chart deployment.
 - Self-healing and pruning of outdated resources.
 
-## Adding a New Environment
+## Adding New Environment
 
 This section should explain how to introduce a new environment, including:
 
@@ -155,7 +155,7 @@ apps:
       - values-staging.yaml
 ```
 
-## Adding a New Helm Chart
+## Adding New Helm Chart
 
 This section should cover:
 
