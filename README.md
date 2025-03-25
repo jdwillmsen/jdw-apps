@@ -170,15 +170,6 @@ Example:
 helm create charts/<app-name>
 ```
 
-## Helm Chart Usage
-
-Each Helm chart can be deployed individually using the following commands:
-
-```sh
-charts repo add jdw-apps https://github.com/jdwillmsen/jdw-apps
-charts install my-app jdw-apps/<chart-name> -f charts/<chart-name>/values-dev.yaml
-```
-
 ## License
 
 This repository is licensed under the MIT License. See the `LICENSE` file for more details.
