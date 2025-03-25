@@ -1,31 +1,31 @@
 apps:
   - appName: secret-store-uat
-    helmPath: helm/secret-store
+    helmPath: charts/secret-store
     namespace: uat
     values:
       - values-uat.yaml
   - appName: container-uat
-    helmPath: helm/container
+    helmPath: charts/container
     namespace: uat
     values:
       - values-uat.yaml
   - appName: usersrole-uat
-    helmPath: helm/usersrole
+    helmPath: charts/usersrole
     namespace: uat
     values:
       - values-uat.yaml
   - appName: authui-uat
-    helmPath: helm/authui
+    helmPath: charts/authui
     namespace: uat
     values:
       - values-uat.yaml
   - appName: servicediscovery-uat
-    helmPath: helm/servicediscovery
+    helmPath: charts/servicediscovery
     namespace: uat
     values:
       - values-uat.yaml
   - appName: usersui-uat
-    helmPath: helm/usersui
+    helmPath: charts/usersui
     namespace: uat
     values:
       - values-uat.yaml

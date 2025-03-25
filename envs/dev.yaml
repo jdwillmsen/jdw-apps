@@ -1,31 +1,31 @@
 apps:
   - appName: secret-store-dev
-    helmPath: helm/secret-store
+    helmPath: charts/secret-store
     namespace: dev
     values:
       - values-dev.yaml
   - appName: container-dev
-    helmPath: helm/container
+    helmPath: charts/container
     namespace: dev
     values:
       - values-dev.yaml
   - appName: usersrole-dev
-    helmPath: helm/usersrole
+    helmPath: charts/usersrole
     namespace: dev
     values:
       - values-dev.yaml
   - appName: authui-dev
-    helmPath: helm/authui
+    helmPath: charts/authui
     namespace: dev
     values:
       - values-dev.yaml
   - appName: servicediscovery-dev
-    helmPath: helm/servicediscovery
+    helmPath: charts/servicediscovery
     namespace: dev
     values:
       - values-dev.yaml
   - appName: usersui-dev
-    helmPath: helm/usersui
+    helmPath: charts/usersui
     namespace: dev
     values:
       - values-dev.yaml
