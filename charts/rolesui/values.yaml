@@ -7,6 +7,8 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   targetMemoryUtilizationPercentage: 80
 
+revisionHistoryLimit: 1
+
 image:
   repository: jdwillmsen/jdw-rolesui
   pullPolicy: IfNotPresent

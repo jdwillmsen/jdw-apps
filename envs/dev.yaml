@@ -29,3 +29,8 @@ apps:
     namespace: dev
     values:
       - values-dev.yaml
+  - appName: rolesui-dev
+    helmPath: charts/rolesui
+    namespace: dev
+    values:
+      - values-dev.yaml

@@ -1,5 +1,5 @@
 image:
-  tag: ""
+  tag: "0.2.1"
 
 resources:
   requests:
