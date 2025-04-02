@@ -7,14 +7,14 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-    - host: usersui.uat.jdwkube.com
+    - host: rolesui.uat.jdwkube.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts:
-        - usersui.uat.jdwkube.com
-      secretName: usersui-uat-tls
+        - rolesui.uat.jdwkube.com
+      secretName: rolesui-uat-tls
 
 envs:
   ENVIRONMENT: uat
