@@ -29,3 +29,8 @@ apps:
     namespace: uat
     values:
       - values-uat.yaml
+  - appName: rolesui-uat
+    helmPath: charts/rolesui
+    namespace: uat
+    values:
+      - values-uat.yaml
