@@ -1,6 +1,6 @@
 revisionHistoryLimit: 1
 image:
-  tag: "0.2.1"
+  tag: "0.3.0"
 
 ingress:
   annotations:
