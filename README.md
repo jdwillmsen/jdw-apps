@@ -1,43 +1,51 @@
 # JDW Apps Helm Repository
 
-## Overview
+[![Deploy Pages](https://github.com/jdwillmsen/jdw-apps/actions/workflows/release.yaml/badge.svg)](https://github.com/jdwillmsen/jdw-apps/actions/workflows/release.yaml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docs](https://img.shields.io/badge/docs-github--pages-blue)](https://jdwillmsen.github.io/jdw-apps/)
+
+<details>
+<summary>📦 Helm Chart Versions</summary>
+
+[![authui Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fauthui%2FChart.yaml&query=%24.appVersion&prefix=v&label=authui)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/authui/Chart.yaml)
+[![container Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fcontainer%2FChart.yaml&query=%24.appVersion&prefix=v&label=container)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/container/Chart.yaml)
+[![rolesui Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Frolesui%2FChart.yaml&query=%24.appVersion&prefix=v&label=rolesui)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/rolesui/Chart.yaml)
+[![usersui Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fusersui%2FChart.yaml&query=%24.appVersion&prefix=v&label=usersui)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/usersui/Chart.yaml)
+[![servicediscovery Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fservicediscovery%2FChart.yaml&query=%24.appVersion&prefix=v&label=servicediscovery)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/servicediscovery/Chart.yaml)
+[![usersrole Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fusersrole%2FChart.yaml&query=%24.appVersion&prefix=v&label=usersrole)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/usersrole/Chart.yaml)
+[![secret-store Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fsecret-store%2FChart.yaml&query=%24.appVersion&prefix=v&label=secret-store)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/secret-store/Chart.yaml)
+
+</details>
+
+---
+
+## 🧭 Overview
 
 JDW Apps is a Helm repository used for deploying applications via Argo CD. It provides a centralized way to manage
-applications in Kubernetes clusters with environment-specific configurations. The setup ensures that deployments are
-automated and self-healing through Argo CD’s `ApplicationSet`.
+Kubernetes applications with environment-specific configurations and GitOps automation.
 
-## Repository Structure
+---
+
+## 📁 Repository Structure
 
 ```text
 .
-├── envs                  # Environment-specific configurations
-│   ├── dev.yaml          # Development environment values
-│   ├── prd.yaml          # Production environment values
-│   └── uat.yaml          # UAT environment values
-├── excluded              # Excluded Helm charts and configurations
-│   ├── *                 # Other excluded manifests
-│   └── secrets-tester    # Example/test Helm chart for secrets management
-├── charts                # Helm charts for various applications
-│   ├── authui            # Authentication UI Helm chart
-│   ├── container         # Containerized application Helm chart
-│   ├── secret-store      # Secret storage management Helm chart
-│   ├── servicediscovery  # Service discovery Helm chart
-│   ├── usersrole         # User role management Helm chart
-│   └── usersui           # User UI Helm chart
-├── jdw-apps.yaml         # Main application configuration
-├── LICENSE               # Repository license
-└── README.md             # This documentation
+├── envs/                 📦 Environment-specific configurations (dev/prd/uat)
+├── excluded/             🗃️ Excluded/test charts and manifests
+├── charts/               🛠️ Helm charts for JDW apps
+├── jdw-apps.yaml         ⚙️ Main app configuration
+├── LICENSE               📄 License info
+└── README.md             📝 This file
 ```
 
-## Automated Deployment - Argo CD
+---
 
-This repository is designed for seamless deployments using Argo CD. It leverages `ApplicationSet` to dynamically
-configure applications based on environment definitions in `envs/`.
+## 🚀 Automated Deployment via Argo CD
 
-### Example `dev.yaml`
+This repo is wired to Argo CD using `ApplicationSet`, which dynamically configures and deploys Helm apps defined in
+`envs/`.
 
-Each environment file defines the applications to be deployed, their Helm chart locations, and corresponding values
-files:
+### 🧾 Example `dev.yaml`
 
 ```yaml
 apps:
@@ -51,31 +59,10 @@ apps:
     namespace: dev
     values:
       - values-dev.yaml
-  - appName: usersrole-dev
-    helmPath: charts/usersrole
-    namespace: dev
-    values:
-      - values-dev.yaml
-  - appName: authui-dev
-    helmPath: charts/authui
-    namespace: dev
-    values:
-      - values-dev.yaml
-  - appName: servicediscovery-dev
-    helmPath: charts/servicediscovery
-    namespace: dev
-    values:
-      - values-dev.yaml
-  - appName: usersui-dev
-    helmPath: charts/usersui
-    namespace: dev
-    values:
-      - values-dev.yaml
+  # ...and so on for other apps
 ```
 
-### Bootstrap Configuration
-
-A single `ApplicationSet` resource ensures all applications are deployed and managed automatically:
+### 🔧 ApplicationSet Bootstrap Configuration
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
@@ -125,52 +112,75 @@ spec:
             {{- toYaml .values | nindent 12 }}
 ```
 
-This configuration ensures:
+---
 
-- Automatic detection of applications based on `envs/` files.
-- Dynamic Helm chart deployment.
-- Self-healing and pruning of outdated resources.
+## 🏗️ Adding a New Environment
 
-## Adding New Environment
+1. Create a new YAML file under `envs/`, e.g. `envs/staging.yaml`
+2. Define applications as shown:
+   ```yaml
+   apps:
+     - appName: usersui-staging
+       helmPath: charts/usersui
+       namespace: staging
+       values:
+         - values-staging.yaml
+   ```
+3. Commit and push — Argo CD will detect and deploy automatically
 
-This section should explain how to introduce a new environment, including:
+---
 
-* Creating a new environment YAML file under envs/
-* Defining applications in the new environment file
-* Committing and pushing changes to trigger Argo CD updates
+## 📦 Adding a New Helm Chart
 
-Example content:
-```yaml
-# Example: envs/staging.yaml
-apps:
-  - appName: secret-store-staging
-    helmPath: charts/secret-store
-    namespace: staging
-    values:
-      - values-staging.yaml
-  - appName: usersui-staging
-    helmPath: charts/usersui
-    namespace: staging
-    values:
-      - values-staging.yaml
-```
+1. Create your chart:
 
-## Adding New Helm Chart
+   ```bash
+   helm create charts/<app-name>
+   ```
 
-This section should cover:
+2. Customize `Chart.yaml`, `values.yaml`, and templates.
+3. Add the chart to the appropriate environment file (e.g., `envs/dev.yaml`).
+4. (Optional) Add `values-dev.yaml`, `values-prd.yaml`, etc. for overrides.
+5. Test your chart locally:
 
-* Creating a new Helm chart inside the helm/ directory
-* Defining the necessary Chart.yaml, values.yaml, and templates/
-* Defining any overrides per environment(s) values-<env>.yaml
-* Adding the chart to the appropriate environment file (envs/*.yaml)
-* Testing the chart with Helm before committing
+   ```bash
+   helm install --dry-run --debug ./charts/<app-name>
+   ```
 
-Example:
-```sh
-helm create charts/<app-name>
-```
+---
 
-## License
+## 🧱 JDW Platform Repos
 
-This repository is licensed under the MIT License. See the `LICENSE` file for more details.
+### ☸️ JDW Kube
 
+The [**JDW Kube**](https://github.com/jdwillmsen/jdw-kube) repo manages the Kubernetes infrastructure for the JDW
+platform.
+
+- 🔒 Cluster Configuration & Secrets Management
+- 🔁 Automated Deployments via Argo CD
+- ⚙️ Base Ingress, Monitoring, and Platform Services
+
+### 🧩 JDW Project
+
+The [**JDW Monorepo**](https://github.com/jdwillmsen/jdw) powers all front-end and back-end services.
+
+- 🧱 Apps (Angular, Go, Spring Boot)
+- 🧬 Libs (UI, feature, util, data-access)
+- ⚙️ Tools (CI/CD, Docker, versioning, linting)
+
+---
+
+## 🌍 Documentation
+
+All Helm charts and deployment details are available via GitHub Pages:
+
+🔗 [**JDW Apps GitHub Pages**](https://jdwillmsen.github.io/jdw-apps/)
+
+This site is auto-updated by 🚀 [GitHub Actions](https://github.com/jdwillmsen/jdw-apps/actions/workflows/release.yaml).
+
+---
+
+## 📄 License
+
+This repository is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the `LICENSE` file for
+full details.
