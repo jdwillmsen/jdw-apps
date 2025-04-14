@@ -5,7 +5,7 @@
 [![Docs](https://img.shields.io/badge/docs-github--pages-blue)](https://jdwillmsen.github.io/jdw-apps/)
 
 <details open>
-<summary>📦 Helm Chart Versions</summary>
+<summary>📦 Helm Chart App Versions</summary>
 
 [![authui Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fauthui%2FChart.yaml&query=%24.appVersion&prefix=v&label=authui)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/authui/Chart.yaml)
 [![container Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fcontainer%2FChart.yaml&query=%24.appVersion&prefix=v&label=container)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/container/Chart.yaml)
