@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docs](https://img.shields.io/badge/docs-github--pages-blue)](https://jdwillmsen.github.io/jdw-apps/)
 
-<details>
+<details open>
 <summary>📦 Helm Chart Versions</summary>
 
 [![authui Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Frefs%2Fheads%2Fmain%2Fcharts%2Fauthui%2FChart.yaml&query=%24.appVersion&prefix=v&label=authui)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/authui/Chart.yaml)
