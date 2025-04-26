@@ -22,7 +22,7 @@ spec:
       annotations:
         argocd.argoproj.io/sync-wave: "1"
     spec:
-      project: default
+      project: jdw
       source:
         repoURL: https://github.com/jdwillmsen/jdw-apps.git
         targetRevision: main

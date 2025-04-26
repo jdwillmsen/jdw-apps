@@ -33,7 +33,7 @@ Kubernetes applications with environment-specific configurations and GitOps auto
 ├── envs/                 📦 Environment-specific configurations (dev/prd/uat)
 ├── excluded/             🗃️ Excluded/test charts and manifests
 ├── charts/               🛠️ Helm charts for JDW apps
-├── jdw-apps.yaml         ⚙️ Main app configuration
+├── bootstrap.yaml        ⚙️ Main app configuration
 ├── LICENSE               📄 License info
 └── README.md             📝 This file
 ```
