@@ -17,6 +17,7 @@ serviceDiscovery:
   remotes:
     authui: https://authui.uat.jdwkube.com
     usersui: https://usersui.uat.jdwkube.com
+    rolesui: https://rolesui.uat.jdwkube.com
   microFrontends:
     - name: authui
       path: auth
@@ -34,3 +35,11 @@ serviceDiscovery:
       icon: groups
       title: Users
       description: This contains viewing users and managing profiles functionality
+    - name: rolesui
+      path: roles
+      remoteName: rolesui
+      moduleName: ./Routes
+      url: https://rolesui.uat.jdwkube.com
+      icon: lock
+      title: Roles
+      description: This contains viewing and managing roles functionality

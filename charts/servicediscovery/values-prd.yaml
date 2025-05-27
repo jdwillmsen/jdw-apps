@@ -1,6 +1,6 @@
 revisionHistoryLimit: 1
 image:
-  tag: "0.3.0"
+  tag: "0.4.0"
 
 ingress:
   annotations:
@@ -19,6 +19,7 @@ serviceDiscovery:
   remotes:
     authui: https://authui.prd.jdwkube.com
     usersui: https://usersui.prd.jdwkube.com
+    rolesui: https://rolesui.prd.jdwkube.com
   microFrontends:
     - name: authui
       path: auth
@@ -36,3 +37,11 @@ serviceDiscovery:
       icon: groups
       title: Users
       description: This contains viewing users and managing profiles functionality
+    - name: rolesui
+      path: roles
+      remoteName: rolesui
+      moduleName: ./Routes
+      url: https://rolesui.prd.jdwkube.com
+      icon: lock
+      title: Roles
+      description: This contains viewing and managing roles functionality

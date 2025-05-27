@@ -17,6 +17,7 @@ serviceDiscovery:
   remotes:
     authui: https://authui.dev.jdwkube.com
     usersui: https://usersui.dev.jdwkube.com
+    rolesui: https://rolesui.dev.jdwkube.com
   microFrontends:
     - name: authui
       path: auth
