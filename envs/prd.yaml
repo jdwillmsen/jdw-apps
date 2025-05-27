@@ -29,3 +29,8 @@ apps:
     namespace: prd
     values:
       - values-prd.yaml
+  - appName: rolesui-prd
+    helmPath: charts/rolesui
+    namespace: prd
+    values:
+      - values-prd.yaml
