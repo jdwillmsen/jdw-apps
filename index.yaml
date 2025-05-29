@@ -24,6 +24,16 @@ entries:
     version: 0.1.0
   rolesui:
   - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2025-05-29T03:05:45.047785341Z"
+    description: A Helm chart for Kubernetes
+    digest: 52ecf1307723678324f9a3f402b9963e4fec14e77fb44e22a8657b9e88d7c6fd
+    name: rolesui
+    type: application
+    urls:
+    - https://github.com/jdwillmsen/jdw-apps/releases/download/rolesui-0.5.2/rolesui-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v2
     appVersion: 0.4.0
     created: "2025-04-13T04:13:14.129096091Z"
     description: A Helm chart for Kubernetes
@@ -77,4 +87,4 @@ entries:
     urls:
     - https://github.com/jdwillmsen/jdw-apps/releases/download/usersui-0.1.0/usersui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-13T04:13:14.920043215Z"
+generated: "2025-05-29T03:05:45.461526722Z"
