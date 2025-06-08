@@ -14,32 +14,33 @@ ingress:
       secretName: servicediscovery-uat-tls
 
 serviceDiscovery:
-  remotes:
-    authui: https://authui.uat.jdwkube.com
-    usersui: https://usersui.uat.jdwkube.com
-    rolesui: https://rolesui.uat.jdwkube.com
-  microFrontends:
-    - name: authui
-      path: auth
-      remoteName: authui
-      moduleName: ./Routes
-      url: https://authui.uat.jdwkube.com
+  routeRemotes:
+    - path: auth
+      name: authui
+      id: authui/Routes
+      entry: https://authui.uat.jdwkube.com/mf-manifest.json
+    - path: users
+      name: usersui
+      id: usersui/Routes
+      entry: https://usersui.uat.jdwkube.com/mf-manifest.json
+    - path: roles
+      name: rolesui
+      id: rolesui/Routes
+      entry: https://rolesui.uat.jdwkube.com/mf-manifest.json
+  componentRemotes:
+    - name: AuthWidgetComponent
+      id: authui/AuthWidget
+      entry: https://authui.uat.jdwkube.com/mf-manifest.json
+  navigationItems:
+    - path: auth
       icon: login
       title: Auth
       description: This contains sign in and sign up functionality
-    - name: usersui
-      path: users
-      remoteName: usersui
-      moduleName: ./Routes
-      url: https://usersui.uat.jdwkube.com
+    - path: users
       icon: groups
       title: Users
       description: This contains viewing users and managing profiles functionality
-    - name: rolesui
-      path: roles
-      remoteName: rolesui
-      moduleName: ./Routes
-      url: https://rolesui.uat.jdwkube.com
+    - path: roles
       icon: lock
       title: Roles
       description: This contains viewing and managing roles functionality
