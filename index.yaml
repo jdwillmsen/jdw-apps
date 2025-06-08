@@ -106,6 +106,16 @@ entries:
     version: 0.1.0
   servicediscovery:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-06-08T05:04:15.782666273Z"
+    description: A Helm chart for Kubernetes
+    digest: f51a8e097ab2b60e841ce731db9374bbc0676e27fd1fa7cdd952d83b2bbb7c0d
+    name: servicediscovery
+    type: application
+    urls:
+    - https://github.com/jdwillmsen/jdw-apps/releases/download/servicediscovery-1.0.0/servicediscovery-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
     appVersion: 0.4.0
     created: "2025-04-13T04:13:14.543748803Z"
     description: A Helm chart for Kubernetes
@@ -177,4 +187,4 @@ entries:
     urls:
     - https://github.com/jdwillmsen/jdw-apps/releases/download/usersui-0.1.0/usersui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-08T05:03:56.206544931Z"
+generated: "2025-06-08T05:04:15.78269643Z"
