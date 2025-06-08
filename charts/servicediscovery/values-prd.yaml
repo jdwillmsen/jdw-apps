@@ -1,6 +1,6 @@
 revisionHistoryLimit: 1
 image:
-  tag: "0.4.0"
+  tag: "1.0.0"
 
 ingress:
   annotations:
@@ -16,32 +16,33 @@ ingress:
       secretName: servicediscovery-prd-tls
 
 serviceDiscovery:
-  remotes:
-    authui: https://authui.prd.jdwkube.com
-    usersui: https://usersui.prd.jdwkube.com
-    rolesui: https://rolesui.prd.jdwkube.com
-  microFrontends:
-    - name: authui
-      path: auth
-      remoteName: authui
-      moduleName: ./Routes
-      url: https://authui.prd.jdwkube.com
+  routeRemotes:
+    - path: auth
+      name: authui
+      id: authui/Routes
+      entry: https://authui.prd.jdwkube.com/mf-manifest.json
+    - path: users
+      name: usersui
+      id: usersui/Routes
+      entry: https://usersui.prd.jdwkube.com/mf-manifest.json
+    - path: roles
+      name: rolesui
+      id: rolesui/Routes
+      entry: https://rolesui.prd.jdwkube.com/mf-manifest.json
+  componentRemotes:
+    - name: AuthWidgetComponent
+      id: authui/AuthWidget
+      entry: https://authui.prd.jdwkube.com/mf-manifest.json
+  navigationItems:
+    - path: auth
       icon: login
       title: Auth
       description: This contains sign in and sign up functionality
-    - name: usersui
-      path: users
-      remoteName: usersui
-      moduleName: ./Routes
-      url: https://usersui.prd.jdwkube.com
+    - path: users
       icon: groups
       title: Users
       description: This contains viewing users and managing profiles functionality
-    - name: rolesui
-      path: roles
-      remoteName: rolesui
-      moduleName: ./Routes
-      url: https://rolesui.prd.jdwkube.com
+    - path: roles
       icon: lock
       title: Roles
       description: This contains viewing and managing roles functionality
