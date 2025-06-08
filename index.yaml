@@ -117,6 +117,16 @@ entries:
     version: 0.1.0
   usersrole:
   - apiVersion: v2
+    appVersion: 0.10.13
+    created: "2025-06-08T05:03:56.20651241Z"
+    description: A Helm chart for Kubernetes
+    digest: 92488d51f8f675c38e23add0c1727882b88968a3bd2f6af45577a318b7d42971
+    name: usersrole
+    type: application
+    urls:
+    - https://github.com/jdwillmsen/jdw-apps/releases/download/usersrole-0.10.13/usersrole-0.10.13.tgz
+    version: 0.10.13
+  - apiVersion: v2
     appVersion: 0.10.12
     created: "2025-05-29T03:07:54.968043135Z"
     description: A Helm chart for Kubernetes
@@ -167,4 +177,4 @@ entries:
     urls:
     - https://github.com/jdwillmsen/jdw-apps/releases/download/usersui-0.1.0/usersui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-08T05:03:43.896505624Z"
+generated: "2025-06-08T05:03:56.206544931Z"
