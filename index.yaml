@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   authui:
   - apiVersion: v2
+    appVersion: 2.0.1
+    created: "2025-06-08T06:43:33.733169776Z"
+    description: A Helm chart for Kubernetes
+    digest: 68da27bf0c901f4f4fde9ed493a46e5d0cd2e52129fe72f433b4671a9a3ec4e0
+    name: authui
+    type: application
+    urls:
+    - https://github.com/jdwillmsen/jdw-apps/releases/download/authui-2.0.1/authui-2.0.1.tgz
+    version: 2.0.1
+  - apiVersion: v2
     appVersion: 2.0.0
     created: "2025-06-08T05:02:57.618322126Z"
     description: A Helm chart for Kubernetes
@@ -197,4 +207,4 @@ entries:
     urls:
     - https://github.com/jdwillmsen/jdw-apps/releases/download/usersui-0.1.0/usersui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-08T06:42:57.298839711Z"
+generated: "2025-06-08T06:43:33.733208308Z"
