@@ -1,0 +1,36 @@
+apps:
+  - appName: secret-store-non
+    helmPath: charts/secret-store
+    namespace: non
+    values:
+      - values-non.yaml
+  - appName: container-non
+    helmPath: charts/container
+    namespace: non
+    values:
+      - values-non.yaml
+  - appName: usersrole-non
+    helmPath: charts/usersrole
+    namespace: non
+    values:
+      - values-non.yaml
+  - appName: authui-non
+    helmPath: charts/authui
+    namespace: non
+    values:
+      - values-non.yaml
+  - appName: servicediscovery-non
+    helmPath: charts/servicediscovery
+    namespace: non
+    values:
+      - values-non.yaml
+  - appName: usersui-non
+    helmPath: charts/usersui
+    namespace: non
+    values:
+      - values-non.yaml
+  - appName: rolesui-non
+    helmPath: charts/rolesui
+    namespace: non
+    values:
+      - values-non.yaml

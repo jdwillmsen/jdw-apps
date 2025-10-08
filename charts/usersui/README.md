@@ -3,6 +3,7 @@
 [![Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Fmain%2Fcharts%2Fusersui%2FChart.yaml&query=%24.appVersion&prefix=v&label=Chart)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/usersui/Chart.yaml)
 [![Dev Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Fmain%2Fcharts%2Fusersui%2FChart.yaml&query=%24.appVersion&prefix=v&label=Dev)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/usersui/values-dev.yaml)
 [![UAT Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Fmain%2Fcharts%2Fusersui%2FChart.yaml&query=%24.appVersion&prefix=v&label=UAT)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/usersui/values-uat.yaml)
+[![Non Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Fmain%2Fcharts%2Fusersui%2FChart.yaml&query=%24.appVersion&prefix=v&label=Non)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/usersui/values-non.yaml)
 [![Prod Version](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjdwillmsen%2Fjdw-apps%2Fmain%2Fcharts%2Fusersui%2Fvalues-prd.yaml&query=%24.image.tag&prefix=v&label=Prod)](https://github.com/jdwillmsen/jdw-apps/blob/main/charts/usersui/values-prd.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -18,7 +19,7 @@ The `usersui` Helm chart is used to deploy the frontend application for managing
     - `serviceaccount.yaml`, `_helpers.tpl`, `NOTES.txt` – Support resources
     - `tests/test-connection.yaml` – Helm test for connectivity
 - `values.yaml` – Base configuration
-- `values-dev.yaml`, `values-uat.yaml`, `values-prd.yaml` – Environment-specific overrides
+- `values-dev.yaml`, `values-uat.yaml`, `values-non.yaml`, `values-prd.yaml` – Environment-specific overrides
 
 ## 🚀 Deployment
 
