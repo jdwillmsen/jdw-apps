@@ -5,7 +5,7 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: eso-store-clusterrole
+  name: eso-store-clusterrole-{{ .Values.env }}
 subjects:
   - kind: ServiceAccount
     name: {{ include "secret-store.serviceAccountName" . }}
